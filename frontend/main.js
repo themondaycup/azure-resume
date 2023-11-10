@@ -2,13 +2,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 });
 
-const functionApiUrl = 'https://getresumecounterchris.azurewebsites.net/api/GetResumeCounter?code=JVhLHVG-wC7q9R3LNv7-kOJuUKYhgvvKxMoSCDquuoQSAzFuenCexA==';
+const functionApiUrl = 'https://getresumecounterchris.azurewebsites.net/api/GetResumeCounter?code=g_aRsUqwP3vmQ3rHHeHiGEPT2ko-hWog_i3wgnC4EgIBAzFuZ28KGA==s://getresumecounterchris.azurewebsites.net/api/GetResumeCounter?code=JVhLHVG-wC7q9R3LNv7-kOJuUKYhgvvKxMoSCDquuoQSAzFuenCexA==';
 const localFunctionApi = 'http://localhost:7071/api/GetResumeCounter';
 
 const getVisitCount = () => {
     let count = 30;
-    fetch(localFunctionApi)
-    .then(response => {
+    fetch(functionApiUrl).then(response => {
         return response.json()
     })
     .then(response => {
